@@ -1,0 +1,17 @@
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .3s linear;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .3s, opacity .3s linear;
+}
+
+.un-cuarto {
+  background: url('../images/un-cuarto.png');
+  background-size: 100% auto;
+  background-repeat:no-repeat;
+}
