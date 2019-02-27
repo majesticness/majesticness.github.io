@@ -1,1 +1,0 @@
-# Un cuarto de costura
