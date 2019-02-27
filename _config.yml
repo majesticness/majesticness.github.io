@@ -9,4 +9,3 @@ url:
 permalink: :title/
 sass:
   sass_dir: css
-theme: jekyll-theme-minimal
