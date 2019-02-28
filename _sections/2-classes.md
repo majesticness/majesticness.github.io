@@ -1,5 +1,5 @@
 ---
-id: classes
+html-id: classes
 text-order: 1
 image-order: 2
 image: machine

@@ -18,7 +18,7 @@
     {% include navigation.html %}
     {% include hero.html %}
     {% for section in site.sections %}
-      <div id="{{ section.id }}" class="row featurette">
+      <div id="{{ section.html-id }}" class="row featurette">
         <div class="col-md-7 order-md-{{ section.text-order }} mt-5">
           <h2 class="featurette-heading"><span class="text-muted">{{ section.name }}</span></h2>
           <p class="lead">{{ section.content }}</p>

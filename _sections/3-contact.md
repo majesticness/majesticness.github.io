@@ -1,5 +1,5 @@
 ---
-id: contact
+html-id: contact
 text-order: 2
 image-order: 1
 image: ironing
