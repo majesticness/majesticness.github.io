@@ -1,7 +1,7 @@
 ---
 html-id: classes
-text-order: 2
-image-order: 1
+text-order: 1
+image-order: 2
 image: machine
 name: Clases
 
