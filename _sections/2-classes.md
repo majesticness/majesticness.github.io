@@ -6,4 +6,6 @@ image: machine
 name: Clases
 
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis leo tellus. Vestibulum lacus mauris, sagittis vel dapibus eu, maximus ut nisi. Pellentesque luctus sem ut turpis sagittis, id egestas purus pellentesque. Vivamus vitae commodo metus, vel egestas erat. Integer id diam id augue euismod interdum. Vestibulum ultrices metus ligula.
+Nuestras clases ofrecen el entorno adecuado para que aprendas diversas y novedosas técnicas de costura, patchwork y quilting. Con nuestra variada oferta de clases, siempre tendrás algo nuevo que aprender.
+
+No importa si eres una _quilter_ experimentada, o si nunca has cosido a máquina. Todas nuestras clases son multinivel y están diseñadas para que comiences (o continúes) tu aventura como _quilter_, elaborando el proyecto de tu elección.
