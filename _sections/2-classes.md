@@ -1,8 +1,8 @@
 ---
 html-id: classes
-text-order: 1
-image-order: 2
-image: cutting
+text-order: 2
+image-order: 1
+image: machine
 name: Clases
 
 ---
