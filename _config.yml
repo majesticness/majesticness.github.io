@@ -9,3 +9,19 @@ url:
 permalink: :title/
 sass:
   sass_dir: css
+
+
+collections:
+  sections:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "sections"
+    values:
+      layout: "section"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

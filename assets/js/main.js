@@ -12,4 +12,26 @@ $(function () {
     }
     lastScrollTop = st;
   });
+
+
+  $(document).on('click', 'a.scroll-to-top', function(event) {
+    var $anchorToTop = $(this);
+    console.log($anchorToTop)
+    $('html, body').stop().animate({
+      scrollTop: ($($anchorToTop.attr('href')).offset().top)
+    }, 1000, 'easeInOutExpo');
+    event.preventDefault();
+  });
+
+  $(document).on('click', 'a.scroll-to', function(event) {
+    var $anchorTo = $(this);
+    $('html, body').stop().animate({
+      scrollTop: ($($anchorTo.attr('href')).offset().top)
+    }, 1000, 'easeInOutExpo');
+    event.preventDefault();
+  });
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 });
