@@ -10,27 +10,29 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>{{ page.title }}</title>
-
-<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Bitter|Comfortaa|Quattrocento" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body id="page-top">
-    <div class="container">
+    
     {% include navigation.html %}
     {% include hero.html %}
+    <div class="container">
     {% for section in site.sections %}
-      <div id="{{ section.html-id }}" class="row featurette">
+      <section id="{{ section.html-id }}" class="row featurette section">
         <div class="col-md-7 order-md-{{ section.text-order }} mt-5">
           <h2 class="featurette-heading"><span class="text-muted">{{ section.name }}</span></h2>
           <p class="lead">{{ section.content }}</p>
         </div>
         <div class="col-md-5 order-md-{{ section.image-order }} ">
-          <img class="featurette-image img-fluid mx-auto" src="./assets/images/{{ section.image }}.png" />
+          <img class="featurette-image img-fluid mx-auto {{ section.image }}" src="./assets/images/{{ section.image }}.png"  data-aos="fade-{{ section.image-fade }}" />
         </div>
-      </div>
+      </section>
     {% endfor %}
+        <hr class="featurette-divider">
+        {% include footer.html %}
     </div>
-    {% include footer.html %}
+    
 {% include imports.html %}
 </body>
 </html>

@@ -10,7 +10,6 @@ permalink: :title/
 sass:
   sass_dir: css
 
-
 collections:
   sections:
     output: true

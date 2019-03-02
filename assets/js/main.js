@@ -1,4 +1,9 @@
 $(function () {
+  AOS.init({
+    duration: 1200,
+    delay: 25,
+    easing: 'ease-in-out-back'
+  });
   var lastScrollTop = 0;
   var $navbar = $('.navbar');
   $(window).scroll(function(event){

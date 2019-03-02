@@ -4,7 +4,7 @@ text-order: 2
 image-order: 1
 image: sewing
 name: Nosotros
-
+image-fade: right
 ---
 La misión de _un cuarto de costura_ es ampliar la oferta de espacios en la Ciudad de México dedicados a fomentar la expresión creativa y el intercambio.
 

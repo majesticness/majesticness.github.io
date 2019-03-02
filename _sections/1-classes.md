@@ -4,7 +4,7 @@ text-order: 1
 image-order: 2
 image: machine
 name: Clases
-
+image-fade: left
 ---
 Nuestras clases ofrecen el entorno adecuado para que aprendas diversas y novedosas técnicas de costura, _patchwork_ y _quilting_. Con nuestra variada oferta de clases, siempre tendrás algo nuevo que aprender.
 
