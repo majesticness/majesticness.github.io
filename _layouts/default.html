@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>{{ page.title }}</title>
-  <link href="https://fonts.googleapis.com/css?family=Arvo|Bitter|Comfortaa|Quattrocento" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84297605-4"></script>
   <script>
@@ -27,7 +27,7 @@
     <div class="jumbotron jumbotron-fluid un-cuarto position-relative">
     <img src="./assets/images/un-cuarto.png" class="img-fluid"/>
     <div class="container w-25 float-right m-3 d-none d-sm-block d-sm-none d-md-block position-absolute">
-        <h1><span class="text-muted display-4">Manos a la obra</h1>
+        <h1><span class="">Manos a la obra</h1>
           <p>Somos una comunidad de <em>quilters</em> en la Ciudad de México. Impartimos clases de costura, <em>quilting</em> y <em>patchwork</em> para todos los niveles.  </p>
     </div>  
 </div>
@@ -35,7 +35,7 @@
     {% for section in site.sections %}
       <section id="{{ section.html-id }}" class="row featurette section">
         <div class="col-md-5 order-md-{{ section.text-order }} mt-5">
-          <h2 class="featurette-heading"><span class="text-muted">{{ section.name }}</span></h2>
+          <h2 class="featurette-heading"><span class="">{{ section.name }}</span></h2>
           <p class="lead">{{ section.content }}</p>
         </div>
         <div class="col-md-7 order-md-{{ section.image-order }} ">
