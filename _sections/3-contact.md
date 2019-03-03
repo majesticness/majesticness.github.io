@@ -7,6 +7,6 @@ name: Contacto
 image-fade: left
 
 ---
-Queremos que tú también seas parte de esta comunidad.  
-  
-Para más información sobre nuestras clases y modalidades de pago, envíanos un correo a [uncuartodecostura@gmail.com](mailto:uncuartodecostura@gmail.com) ó contáctanos a través de nuestras redes sociales.
+Queremos que tú también seas parte de esta comunidad.
+
+Para más información déjanos un mensaje, o contáctanos a través de nuestras redes sociales. 
