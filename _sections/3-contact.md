@@ -5,5 +5,8 @@ image-order: 2
 image: cutting
 name: Contacto
 image-fade: left
+
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis leo tellus. Vestibulum lacus mauris, sagittis vel dapibus eu, maximus ut nisi. Pellentesque luctus sem ut turpis sagittis, id egestas purus pellentesque. Vivamus vitae commodo metus, vel egestas erat. Integer id diam id augue euismod interdum. Vestibulum ultrices metus ligula. Aliquam eget dignissim lectus.
+Queremos que tú también seas parte de esta comunidad.  
+  
+Para más información sobre nuestras clases y modalidades de pago, envíanos un correo a [uncuartodecostura@gmail.com](mailto:uncuartodecostura@gmail.com) ó contáctanos a través de nuestras redes sociales.
