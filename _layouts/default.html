@@ -34,11 +34,11 @@
     <div class="container">
     {% for section in site.sections %}
       <section id="{{ section.html-id }}" class="row featurette section">
-        <div class="col-md-7 order-md-{{ section.text-order }} mt-5">
+        <div class="col-md-5 order-md-{{ section.text-order }} mt-5">
           <h2 class="featurette-heading"><span class="text-muted">{{ section.name }}</span></h2>
           <p class="lead">{{ section.content }}</p>
         </div>
-        <div class="col-md-5 order-md-{{ section.image-order }} ">
+        <div class="col-md-7 order-md-{{ section.image-order }} ">
           <img class="featurette-image img-fluid mx-auto {{ section.image }}" src="./assets/images/{{ section.image }}.png"  data-aos="fade-{{ section.image-fade }}" />
         </div>
       </section>
