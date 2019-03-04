@@ -14,6 +14,9 @@ collections:
   sections:
     output: true
 
+
+exclude: [backend/]
+
 defaults:
   - scope:
       path: ""
