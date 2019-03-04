@@ -9,7 +9,7 @@
   <title></title>
   <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84297605-4"></script>
+  
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -22,7 +22,7 @@
     
       <nav class="container navbar fixed-top navbar-light bg-un-cuarto">
     <a class="navbar-brand inline" href="#">
-        <img class="d-none d-md-inline" src="./assets/images/logo.svg" style="width:3.5em"/>
+        <img class="" src="./assets/images/logo.svg" style="width:3.5em"/>
     </a>
     <div class="navbar-nav-scroll">
        <ul class="navbar-nav bd-navbar-nav flex-row">
@@ -51,13 +51,19 @@
   </nav>
 
     <div class="jumbotron jumbotron-fluid un-cuarto position-relative">
-    <img src="./assets/images/un-cuarto.png" class="img-fluid"/>
-    <div class="container w-25 float-right m-3 d-none d-sm-block d-sm-none d-md-block position-absolute">
-        <h1><span class="">Manos a la obra</h1>
-          <p>Somos una comunidad de <em>quilters</em> en la Ciudad de México. Impartimos clases de costura, <em>quilting</em> y <em>patchwork</em> para todos los niveles.  </p>
-    </div>  
-</div>
+        <img src="./assets/images/un-cuarto.png" class="img-fluid"/>
+        <div class="container w-25 float-right m-3 d-none d-xl-block position-absolute">
+            <h1>Manos a la obra</h1>
+              <p>Somos una comunidad de <em>quilters</em> en la Ciudad de México. Impartimos clases de costura, <em>quilting</em> y <em>patchwork</em> para todos los niveles.  </p>
+        </div>  
+        </div>
     <div class="container">
+      <section id="copy" class="row featurette section d-xl-none">
+        <div class="col-md-12">
+            <h2 class="featurette-heading">Manos a la obra</h2>
+            <p>Somos una comunidad de <em>quilters</em> en la Ciudad de México. Impartimos clases de costura, <em>quilting</em> y <em>patchwork</em> para todos los niveles.  </p>
+        </div> 
+      </section>
     
       <section id="classes" class="row featurette section">
         <div class="col-md-5 order-md-1 mt-5">
@@ -97,23 +103,53 @@
         </div>
       </section>
     
+
+
       <section id="contact" class="row featurette section">
         <div class="col-md-5 order-md-1 mt-5">
           <h2 class="featurette-heading"><span class="">Contacto</span></h2>
-          <p class="lead"><p>Queremos que tú también seas parte de esta comunidad.</p>
-
-<p>Para más información déjanos un mensaje, o contáctanos a través de nuestras redes sociales.</p>
-</p>
+          <p id="contact-message">Ponte en contacto con nosotros.</p>
+          <form id="contact-form" action="/">
+            <div class="form-group">
+                  <label for="nameInputEmail1">Nombre:</label>
+                  <input type="text" class="form-control" id="nameInputEmail1" name="name" placeholder="Nombre completo">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Correo:</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                         placeholder="Correo electrónico">
+              </div>
+              <div class="form-group">
+                  <label for="messageInputEmail1">Mensaje:</label>
+                  <textarea type="textarea" class="form-control" id="messageInputEmail1" name="message"
+                            placeholder="Mensaje"></textarea>
+              </div>
+            <div class="g-recaptcha" data-sitekey="6LdJLZUUAAAAAOkctapDFOXwPABh-1Prt9IQ7aYs"></div>
+            <input class="btn btn-primary g-recaptcha" type="submit" value="Contáctanos" >
+          
+          </form>
         </div>
         <div class="col-md-7 order-md-2 ">
           <img class="featurette-image img-fluid mx-auto cutting" src="./assets/images/cutting.png"  data-aos="fade-left" />
         </div>
       </section>
-    
+
+
+
+
+
         <hr class="featurette-divider">
-          <footer>
-    <p class="float-left mb-2">© 2019 Un cuarto de costura</p>
-    <p class="float-right mb-0"><a class="scroll-to-top mb-2" href="#page-top"><i class="fas fa-angle-up"></i></a><img class="emji" src="./assets/images/emji-small.png"></p>
+          <footer class="row">
+    <div class="col-4">
+        <p class="float-left mb-2">© 2019 Un cuarto de costura</p>
+    </div>
+    <div class="col-4 d-flex d-inline justify-content-center">
+        <a class="" href="https://www.facebook.com/uncuartodecostura/"><i class="fab fa-facebook-f"></i></a>
+        <a class="ml-2" href="https://www.instagram.com/uncuartodecostura"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="col-4">
+        <p class="float-right mb-0"><a class="scroll-to-top mb-2" href="#page-top"><i class="fas fa-angle-up"></i></a><img class="emji" src="./assets/images/emji-small.png"></p>
+    </div>
   </footer>
     </div>
     
@@ -127,7 +163,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js" integrity="sha256-tw5/wId1F+4LyUF2ZJnpRoHNXJ66jrK3IGhfq4LhLjY=" crossorigin="anonymous"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84297605-4"></script>
   <script src="./assets/js/main.js"></script>
+
 </body>
 </html>

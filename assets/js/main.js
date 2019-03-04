@@ -1,3 +1,6 @@
+
+
+
 $(function () {
   AOS.init({
     duration: 1200,
@@ -18,6 +21,39 @@ $(function () {
     lastScrollTop = st;
   });
 
+
+  $("#contact-form").submit(function (event) {
+    event.preventDefault();
+    console.log("Hello world!");
+
+
+    var url = "https://nhjf2on317.execute-api.us-east-1.amazonaws.com/api/users"
+
+    var data = {
+        name: $("#contact-form input[name='name']").val(),
+        email: $("#contact-form input[name='email']").val(),
+        message: $("#contact-form textarea[name='message']").val()
+    };
+
+    $.ajax({
+        url: url,
+        type: "POST",
+        dataType: "json",
+        crossDomain: "true",
+        contentType: "application/json",
+        data: JSON.stringify(data),
+        success: function (response) {
+            console.log(response)
+            $("#contact-form").addClass("d-none");
+            $("#contact-message").text("Gracias, pronto nos pondremos en contacto contigo.")
+
+        },
+        error: function (xhr, status) {
+            console.log(xhr);
+            console.log(status);
+        }} );
+ 
+  });
 
   $(document).on('click', 'a.scroll-to-top', function(event) {
     var $anchorToTop = $(this);
