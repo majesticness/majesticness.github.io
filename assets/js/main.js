@@ -32,7 +32,8 @@ $(function () {
     var data = {
         name: $("#contact-form input[name='name']").val(),
         email: $("#contact-form input[name='email']").val(),
-        message: $("#contact-form textarea[name='message']").val()
+        message: $("#contact-form textarea[name='message']").val(),
+        gRecaptacha: $("#contact-form textarea[name='g-recaptcha-response']").val()
     };
 
     $.ajax({
