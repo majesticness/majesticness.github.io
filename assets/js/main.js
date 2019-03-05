@@ -33,7 +33,7 @@ $(function () {
         name: $("#contact-form input[name='name']").val(),
         email: $("#contact-form input[name='email']").val(),
         message: $("#contact-form textarea[name='message']").val(),
-        gRecaptacha: $("#contact-form textarea[name='g-recaptcha-response']").val()
+        gRecaptcha: $("#contact-form textarea[name='g-recaptcha-response']").val()
     };
 
     $.ajax({
@@ -44,10 +44,10 @@ $(function () {
         contentType: "application/json",
         data: JSON.stringify(data),
         success: function (response) {
-            console.log(response)
-            $("#contact-form").addClass("d-none");
-            $("#contact-message").text("Gracias, pronto nos pondremos en contacto contigo.")
-
+            if(response.status){
+                $("#contact-form").addClass("d-none");
+                $("#contact-message").text("Gracias, pronto nos pondremos en contacto contigo.")
+            }
         },
         error: function (xhr, status) {
             console.log(xhr);
