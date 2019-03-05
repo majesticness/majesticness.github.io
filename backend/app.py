@@ -2,14 +2,10 @@ from chalice import Chalice
 import boto3
 from botocore.exceptions import ClientError
 import os
+import urllib.request
+import urllib.parse
 
 app = Chalice(app_name='backend')
-
-
-@app.route('/')
-def index():
-    return {'hello': 'world'}
-
 
 SENDER = os.environ['SENDER']
 RECIPIENT = os.environ['RECIPIENT']
@@ -21,6 +17,8 @@ CHARSET = "UTF-8"
 def create_user():
     user_as_json = app.current_request.json_body
 
+    print(user_as_json)
+
     email = app.current_request.json_body['email']
 
     name = app.current_request.json_body['name']
@@ -31,53 +29,47 @@ def create_user():
                "Correo: {} \r\n"
                "Mensaje: {}").format(name, email, message)
 
-    print(body)
-
-    client = boto3.client('ses')
+    recaptchaResponse = app.current_request.json_body['recaptchaResponse']
+    private_recaptcha = SECRET_KEY
     
-    response = client.send_email(
-        Destination={
-            'ToAddresses': [
-                RECIPIENT,
-            ],
-        },
-        Message={
-            'Body': {
-                'Text': {
+    url = 'https://www.google.com/recaptcha/api/siteverify'
+    
+    
+    params = urllib.urlencode({
+            'secret': private_recaptcha,
+            'response': recaptchaResponse
+        })
+    
+    data = urllib.urlopen(url, params).read()
+    result = json.loads(data)
+    success = result.get('success', None)
+    message = "Failure"
+    if success:
+    
+        client = boto3.client('ses')
+        
+        response = client.send_email(
+            Destination={
+                'ToAddresses': [
+                    RECIPIENT,
+                ],
+            },
+            Message={
+                'Body': {
+                    'Text': {
+                        'Charset': CHARSET,
+                        'Data': body,
+                    },
+                },
+                'Subject': {
                     'Charset': CHARSET,
-                    'Data': body,
+                    'Data': "Contacto para informes.",
                 },
             },
-            'Subject': {
-                'Charset': CHARSET,
-                'Data': "Contacto para informes.",
-            },
-        },
-        Source=SENDER,
-    )
+            Source=SENDER,
+        )
+        
+        message = "Success"
 
 
-    return {'message': "Success"}
-
-
-# The view function above will return {"hello": "world"}
-# whenever you make an HTTP GET request to '/'.
-#
-# Here are a few more examples:
-#
-# @app.route('/hello/{name}')
-# def hello_name(name):
-#    # '/hello/james' -> {"hello": "james"}
-#    return {'hello': name}
-#
-# @app.route('/users', methods=['POST'])
-# def create_user():
-#     # This is the JSON body the user sent in their POST request.
-#     user_as_json = app.current_request.json_body
-#     # We'll echo the json body back to the user in a 'user' key.
-#     return {'user': user_as_json}
-#
-# See the README documentation for more examples.
-#
-
-#
+    return {'message': message}
