@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -42,7 +42,7 @@ h2 {
 
 .un-cuarto div {
   width: 300px;
-  right: 4rem;
+  right: 8rem;
   top: 7rem;
 }
 
